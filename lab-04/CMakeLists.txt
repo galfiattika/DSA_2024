@@ -3,4 +3,8 @@ project(lab_04 C)
 
 set(CMAKE_C_STANDARD 23)
 
-add_executable(lab_04 main.c)
+add_executable(lab_04 main.c
+        Sources/array.c
+        Headers/array.h
+        Headers/constants.h)
+include_directories(Headers)
