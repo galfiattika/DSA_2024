@@ -43,6 +43,6 @@ int main() {
         deleteItemAt(&array,rand()%(10+1));
     }
     deallocateIntArray(&array);
-
+//kesz
     return 0;
 }
