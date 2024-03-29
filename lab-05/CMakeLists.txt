@@ -8,4 +8,6 @@ add_executable(lab_05 main.c
         Headers/stack.h
         Headers/constants.h
         Sources/regular_queue.c
-        Headers/regular_queue.h)
+        Headers/regular_queue.h
+        Sources/circular_queue.c
+        Headers/circular_queue.h)

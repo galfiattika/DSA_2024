@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "Headers/stack.h"
 #include "Headers/regular_queue.h"
-
+#include "Headers/circular_queue.h"
 #include <stdlib.h>
 #include <string.h>
 
@@ -46,6 +46,7 @@ int main() {
 
     return 0;
      */
+    /*
     Queue queue;
     createQueue(MAX_CAPACITY, &queue);
 
@@ -91,7 +92,58 @@ int main() {
             default:
                 printf("Invalid option! Please choose again.\n");
         }
+    }*/
+    Queue stringQueue;
+    createQueue(&stringQueue);
+    bool ok = true;
+    while (ok) {
+        printf("\nChoose from the following options:\n"
+               "\t1. Check if queue is empty\n"
+               "\t2. Check if queue is full\n"
+               "\t3. Add a new item to the queue\n"
+               "\t4. Remove an item from the queue\n"
+               "\t5. Display all items waiting in the queue\n"
+               "\t0. Exit\n\nChoose an option:");
+
+        int option;
+        scanf("%i", &option);
+
+        switch (option) {
+            case 0:
+                ok = false;
+                destroyQueue(&stringQueue);
+                printf("Exiting.\n");
+                break;
+            case 1:
+                printf("Queue is%s empty.\n", isEmpty(stringQueue) ? "" : " not");
+                break;
+            case 2:
+                printf("Queue is%s full.\n", isFull(stringQueue) ? "" : " not");
+                break;
+            case 3: {
+                printf("Enter the string to be added to the queue: ");
+                char newItem[STRING_LENGTH];
+                scanf("%s", newItem);
+                enqueue(&stringQueue, newItem);
+                printf("Item '%s' added to the queue.\n", newItem);
+                break;
+            }
+            case 4: {
+                char* dequeuedItem = dequeue(&stringQueue);
+                if (dequeuedItem != NULL) {
+                    printf("Item '%s' removed from the queue.\n", dequeuedItem);
+                }
+                break;
+            }
+            case 5:
+                display(stringQueue);
+                break;
+            default:
+                printf("Invalid option! Please choose again.\n");
+        }
     }
+
+
     return 0;
     }
 
