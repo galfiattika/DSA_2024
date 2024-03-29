@@ -12,8 +12,8 @@ typedef struct {
     int *elements;
 }Stack;
 void createStack(int capacity, Stack *stack);
-bool isEmpty(Stack stack);
-bool isFull(Stack stack);
+/*bool isEmpty(Stack stack);
+bool isFull(Stack stack);*/
 void push(Stack *stack, int item);
 int pop(Stack *stack);
 char peek(Stack stack);

@@ -18,14 +18,14 @@ void createStack(int capacity, Stack *stack) {
     }
 }
 
-bool isEmpty(Stack stack) {
+/*bool isEmpty(Stack stack) {
     return stack.top == -1;
 }
 
 bool isFull(Stack stack) {
     return stack.top == stack.capacity - 1;
 }
-
+*/
 void push(Stack *stack, int item) {
     if (isFull(*stack)) {
         printf("The stack is full!\n");

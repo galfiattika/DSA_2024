@@ -6,4 +6,6 @@ set(CMAKE_C_STANDARD 23)
 add_executable(lab_05 main.c
         Sources/stack.c
         Headers/stack.h
-        Headers/constants.h)
+        Headers/constants.h
+        Sources/regular_queue.c
+        Headers/regular_queue.h)
