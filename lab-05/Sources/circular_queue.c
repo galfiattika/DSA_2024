@@ -4,6 +4,7 @@
 
 #include "../Headers/circular_queue.h"
 #include <stdio.h>
+#include <string.h>
 void createQueue(Queue *queue) {
     queue->front = -1;
     queue->rear = -1;
